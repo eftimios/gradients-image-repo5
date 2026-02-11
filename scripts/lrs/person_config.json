@@ -21,19 +21,19 @@
                 ]
             },
             "s": {
-                "max_train_epochs": 33,
-                "train_batch_size": 4,
+                "max_train_epochs": 32,
+                "train_batch_size": 6,
                 "gradient_accumulation_steps": 1,
-                "unet_lr": 1.0,
-                "text_encoder_lr": 1.0,
+                "unet_lr": 0.9,
+                "text_encoder_lr": 0.9,
                 "lr_scheduler": "constant",
-                "min_snr_gamma": 5,
+                "min_snr_gamma": 6,
                 "max_data_loader_n_workers": 4,
                 "optimizer_type": "prodigy",
                 "optimizer_args": [
                     "decouple=True",
-                    "d_coef=1.0",
-                    "weight_decay=0.008",
+                    "d_coef=1.2",
+                    "weight_decay=0.015",
                     "use_bias_correction=True",
                     "safeguard_warmup=True"
                 ]
@@ -306,19 +306,19 @@
                 ]
             },
             "s": {
-                "max_train_epochs": 32,
+                "max_train_epochs": 40,
                 "train_batch_size": 6,
                 "gradient_accumulation_steps": 1,
-                "unet_lr": 0.9,
-                "text_encoder_lr": 0.9,
-                "lr_scheduler": "constant",
-                "min_snr_gamma": 6,
+                "unet_lr": 0.75,
+                "text_encoder_lr": 0.75,
+                "lr_scheduler": "cosine",
+                "min_snr_gamma": 7,
                 "max_data_loader_n_workers": 4,
                 "optimizer_type": "prodigy",
                 "optimizer_args": [
                     "decouple=True",
-                    "d_coef=1.2",
-                    "weight_decay=0.015",
+                    "d_coef=0.8",
+                    "weight_decay=0.05",
                     "use_bias_correction=True",
                     "safeguard_warmup=True"
                 ]
@@ -343,7 +343,7 @@
                 ]
             },
             "l": {
-                "max_train_epochs": 19,
+                "max_train_epochs": 24,
                 "train_batch_size": 10,
                 "gradient_accumulation_steps": 1,
                 "unet_lr": 1.1,
@@ -355,8 +355,8 @@
                 "optimizer_type": "prodigy",
                 "optimizer_args": [
                     "decouple=True",
-                    "d_coef=1.0",
-                    "weight_decay=0.01",
+                    "d_coef=1.1",
+                    "weight_decay=0.02",
                     "use_bias_correction=True",
                     "safeguard_warmup=True"
                 ]
@@ -591,22 +591,19 @@
                 ]
             },
             "s": {
-                "max_train_epochs": 30,
-                "train_batch_size": 4,
+                "max_train_epochs": 32,
+                "train_batch_size": 6,
                 "gradient_accumulation_steps": 1,
-                "network_dim": 32,
-                "network_alpha": 32,
-                "unet_lr": 1.0,
-                "text_encoder_lr": 1.0,
+                "unet_lr": 0.9,
+                "text_encoder_lr": 0.9,
                 "lr_scheduler": "constant",
-                "min_snr_gamma": 5,
-                "prior_loss_weight": 1.0,
-                "max_data_loader_n_workers": 2,
+                "min_snr_gamma": 6,
+                "max_data_loader_n_workers": 4,
                 "optimizer_type": "prodigy",
                 "optimizer_args": [
                     "decouple=True",
-                    "d_coef=1",
-                    "weight_decay=0.01",
+                    "d_coef=1.2",
+                    "weight_decay=0.015",
                     "use_bias_correction=True",
                     "safeguard_warmup=True"
                 ]
@@ -671,38 +668,37 @@
         },
         "7637327a8414801bf0bb4d6d1b574dd95c05525165ee271cc085b64f89c8cba8": {
             "xs": {
-                "max_train_epochs": 35,
-                "train_batch_size": 6,
-                "gradient_accumulation_steps": 1,
-                "unet_lr": 1.0,
-                "text_encoder_lr": 1.0,
+                "max_train_epochs": 38,
+                "train_batch_size": 4,
+                "gradient_accumulation_steps": 2,
+                "unet_lr": 0.88,
+                "text_encoder_lr": 0.88,
                 "lr_scheduler": "constant",
-                "min_snr_gamma": 5,
-                "caption_dropout_rate": 0.05,
+                "min_snr_gamma": 7,
                 "max_data_loader_n_workers": 4,
                 "optimizer_type": "prodigy",
                 "optimizer_args": [
                     "decouple=True",
-                    "d_coef=2",
-                    "weight_decay=0.005",
+                    "d_coef=1.3",
+                    "weight_decay=0.015",
                     "use_bias_correction=True",
                     "safeguard_warmup=True"
                 ]
             },
             "s": {
-                "max_train_epochs": 25,
+                "max_train_epochs": 35,
                 "train_batch_size": 6,
                 "gradient_accumulation_steps": 1,
-                "unet_lr": 1.0,
-                "text_encoder_lr": 1.0,
+                "unet_lr": 0.99,
+                "text_encoder_lr": 0.99,
                 "lr_scheduler": "constant",
-                "min_snr_gamma": 6,
+                "min_snr_gamma": 7,
                 "max_data_loader_n_workers": 4,
                 "optimizer_type": "prodigy",
                 "optimizer_args": [
                     "decouple=True",
                     "d_coef=1.2",
-                    "weight_decay=0.005",
+                    "weight_decay=0.015",
                     "use_bias_correction=True",
                     "safeguard_warmup=True"
                 ]
@@ -792,7 +788,6 @@
                 "text_encoder_lr": 0.9,
                 "lr_scheduler": "constant",
                 "min_snr_gamma": 6,
-                "caption_dropout_rate": 0.05,
                 "max_data_loader_n_workers": 4,
                 "optimizer_type": "prodigy",
                 "optimizer_args": [
@@ -1546,7 +1541,22 @@
                 ]
             },
             "s": {
-                "max_train_epochs": 30
+                "max_train_epochs": 32,
+                "train_batch_size": 6,
+                "gradient_accumulation_steps": 1,
+                "unet_lr": 0.9,
+                "text_encoder_lr": 0.9,
+                "lr_scheduler": "constant",
+                "min_snr_gamma": 6,
+                "max_data_loader_n_workers": 4,
+                "optimizer_type": "prodigy",
+                "optimizer_args": [
+                    "decouple=True",
+                    "d_coef=1.2",
+                    "weight_decay=0.015",
+                    "use_bias_correction=True",
+                    "safeguard_warmup=True"
+                ]
             },
             "m": {
                 "max_train_epochs": 26,
@@ -1608,14 +1618,13 @@
         },
         "84b1be29d81de0bf88d6c4033943d2bc4b543d9ebba9e1c9678296237f147466": {
             "xs": {
-                "max_train_epochs": 35,
+                "max_train_epochs": 48,
                 "train_batch_size": 4,
-                "gradient_accumulation_steps": 1,
-                "unet_lr": 1.0,
-                "text_encoder_lr": 1.0,
+                "gradient_accumulation_steps": 2,
+                "unet_lr": 0.9,
+                "text_encoder_lr": 0.9,
                 "lr_scheduler": "constant",
-                "min_snr_gamma": 5,
-                "caption_dropout_rate": 0.03,
+                "min_snr_gamma": 6,
                 "max_data_loader_n_workers": 4,
                 "optimizer_type": "prodigy",
                 "optimizer_args": [
@@ -1627,52 +1636,51 @@
                 ]
             },
             "s": {
-                "max_train_epochs": 30,
-                "train_batch_size": 4,
+                "max_train_epochs": 45,
+                "train_batch_size": 8,
                 "gradient_accumulation_steps": 1,
-                "unet_lr": 1.0,
-                "text_encoder_lr": 1.0,
+                "unet_lr": 0.95,
+                "text_encoder_lr": 0.95,
                 "lr_scheduler": "constant",
-                "min_snr_gamma": 5,
-                "caption_dropout_rate": 0.05,
+                "min_snr_gamma": 6,
                 "max_data_loader_n_workers": 4,
                 "optimizer_type": "prodigy",
                 "optimizer_args": [
                     "decouple=True",
-                    "d_coef=1.0",
+                    "d_coef=1.1",
                     "weight_decay=0.01",
                     "use_bias_correction=True",
                     "safeguard_warmup=True"
                 ]
             },
             "m": {
-                "max_train_epochs": 26,
-                "train_batch_size": 6,
+                "max_train_epochs": 36,
+                "train_batch_size": 8,
                 "gradient_accumulation_steps": 1,
                 "unet_lr": 1.0,
                 "text_encoder_lr": 1.0,
-                "lr_scheduler": "constant",
-                "min_snr_gamma": 5,
-                "caption_dropout_rate": 0.05,
+                "lr_scheduler": "constant_with_warmup",
+                "lr_warmup_steps": 50,
+                "min_snr_gamma": 6,
                 "max_data_loader_n_workers": 4,
                 "optimizer_type": "prodigy",
                 "optimizer_args": [
                     "decouple=True",
-                    "d_coef=1.0",
+                    "d_coef=1.1",
                     "weight_decay=0.01",
                     "use_bias_correction=True",
                     "safeguard_warmup=True"
                 ]
             },
             "l": {
-                "max_train_epochs": 22,
-                "train_batch_size": 8,
+                "max_train_epochs": 26,
+                "train_batch_size": 10,
                 "gradient_accumulation_steps": 1,
-                "unet_lr": 1.0,
-                "text_encoder_lr": 1.0,
-                "lr_scheduler": "constant",
-                "min_snr_gamma": 5,
-                "caption_dropout_rate": 0.07,
+                "unet_lr": 1.05,
+                "text_encoder_lr": 1.05,
+                "lr_scheduler": "constant_with_warmup",
+                "lr_warmup_steps": 75,
+                "min_snr_gamma": 6,
                 "max_data_loader_n_workers": 6,
                 "optimizer_type": "prodigy",
                 "optimizer_args": [
@@ -1685,18 +1693,18 @@
             },
             "xl": {
                 "max_train_epochs": 16,
-                "train_batch_size": 10,
+                "train_batch_size": 12,
                 "gradient_accumulation_steps": 1,
-                "unet_lr": 1.0,
-                "text_encoder_lr": 1.0,
-                "lr_scheduler": "constant",
-                "min_snr_gamma": 5,
-                "caption_dropout_rate": 0.1,
+                "unet_lr": 1.1,
+                "text_encoder_lr": 1.1,
+                "lr_scheduler": "constant_with_warmup",
+                "lr_warmup_steps": 100,
+                "min_snr_gamma": 6,
                 "max_data_loader_n_workers": 8,
                 "optimizer_type": "prodigy",
                 "optimizer_args": [
                     "decouple=True",
-                    "d_coef=1.0",
+                    "d_coef=0.9",
                     "weight_decay=0.01",
                     "use_bias_correction=True",
                     "safeguard_warmup=True"
@@ -2008,19 +2016,20 @@
                 ]
             },
             "s": {
-                "max_train_epochs": 42,
+                "max_train_epochs": 60,
                 "train_batch_size": 6,
                 "gradient_accumulation_steps": 1,
-                "unet_lr": 0.9,
-                "text_encoder_lr": 0.9,
                 "lr_scheduler": "constant",
                 "min_snr_gamma": 6,
+                "prior_loss_weight": 0.78,
+                "huber_c": 0.1,
+                "huber_schedule": "snr",
                 "max_data_loader_n_workers": 4,
                 "optimizer_type": "prodigy",
                 "optimizer_args": [
                     "decouple=True",
-                    "d_coef=1.2",
-                    "weight_decay=0.015",
+                    "d_coef=1.0",
+                    "weight_decay=0.01",
                     "use_bias_correction=True",
                     "safeguard_warmup=True"
                 ]
@@ -2045,14 +2054,15 @@
                 ]
             },
             "l": {
-                "max_train_epochs": 25,
+                "max_train_epochs": 28,
                 "train_batch_size": 10,
                 "gradient_accumulation_steps": 1,
-                "unet_lr": 1.1,
-                "text_encoder_lr": 1.1,
                 "lr_scheduler": "constant_with_warmup",
                 "lr_warmup_steps": 75,
-                "min_snr_gamma": 6,
+                "min_snr_gamma": 7,
+                "prior_loss_weight": 1.0,
+                "huber_c": 0.1,
+                "huber_schedule": "snr",
                 "max_data_loader_n_workers": 6,
                 "optimizer_type": "prodigy",
                 "optimizer_args": [
@@ -2658,34 +2668,34 @@
                 "max_train_epochs": 38,
                 "train_batch_size": 4,
                 "gradient_accumulation_steps": 2,
-                "unet_lr": 0.9,
-                "text_encoder_lr": 0.9,
+                "unet_lr": 0.88,
+                "text_encoder_lr": 0.88,
                 "lr_scheduler": "constant",
-                "min_snr_gamma": 6,
+                "min_snr_gamma": 7,
                 "max_data_loader_n_workers": 4,
                 "optimizer_type": "prodigy",
                 "optimizer_args": [
                     "decouple=True",
-                    "d_coef=0.9",
+                    "d_coef=1.3",
                     "weight_decay=0.015",
                     "use_bias_correction=True",
                     "safeguard_warmup=True"
                 ]
             },
             "s": {
-                "max_train_epochs": 25,
-                "train_batch_size": 4,
+                "max_train_epochs": 35,
+                "train_batch_size": 6,
                 "gradient_accumulation_steps": 1,
-                "unet_lr": 1,
-                "text_encoder_lr": 1,
+                "unet_lr": 0.99,
+                "text_encoder_lr": 0.99,
                 "lr_scheduler": "constant",
-                "min_snr_gamma": 5,
-                "max_data_loader_n_workers": 2,
+                "min_snr_gamma": 7,
+                "max_data_loader_n_workers": 4,
                 "optimizer_type": "prodigy",
                 "optimizer_args": [
                     "decouple=True",
-                    "d_coef=1",
-                    "weight_decay=0.01",
+                    "d_coef=1.2",
+                    "weight_decay=0.015",
                     "use_bias_correction=True",
                     "safeguard_warmup=True"
                 ]
@@ -2694,16 +2704,16 @@
                 "max_train_epochs": 28,
                 "train_batch_size": 8,
                 "gradient_accumulation_steps": 1,
-                "unet_lr": 1.0,
-                "text_encoder_lr": 1.0,
+                "unet_lr": 1.1,
+                "text_encoder_lr": 1.1,
                 "lr_scheduler": "constant_with_warmup",
                 "lr_warmup_steps": 50,
-                "min_snr_gamma": 6,
+                "min_snr_gamma": 7,
                 "max_data_loader_n_workers": 4,
                 "optimizer_type": "prodigy",
                 "optimizer_args": [
                     "decouple=True",
-                    "d_coef=1.0",
+                    "d_coef=1.1",
                     "weight_decay=0.01",
                     "use_bias_correction=True",
                     "safeguard_warmup=True"
@@ -2713,16 +2723,16 @@
                 "max_train_epochs": 20,
                 "train_batch_size": 10,
                 "gradient_accumulation_steps": 1,
-                "unet_lr": 1.05,
-                "text_encoder_lr": 1.05,
+                "unet_lr": 1.21,
+                "text_encoder_lr": 1.21,
                 "lr_scheduler": "constant_with_warmup",
                 "lr_warmup_steps": 75,
-                "min_snr_gamma": 6,
+                "min_snr_gamma": 7,
                 "max_data_loader_n_workers": 6,
                 "optimizer_type": "prodigy",
                 "optimizer_args": [
                     "decouple=True",
-                    "d_coef=1.05",
+                    "d_coef=1.0",
                     "weight_decay=0.01",
                     "use_bias_correction=True",
                     "safeguard_warmup=True"
@@ -2732,16 +2742,16 @@
                 "max_train_epochs": 12,
                 "train_batch_size": 12,
                 "gradient_accumulation_steps": 1,
-                "unet_lr": 1.1,
-                "text_encoder_lr": 1.1,
+                "unet_lr": 1.32,
+                "text_encoder_lr": 1.32,
                 "lr_scheduler": "constant_with_warmup",
                 "lr_warmup_steps": 100,
-                "min_snr_gamma": 6,
+                "min_snr_gamma": 7,
                 "max_data_loader_n_workers": 8,
                 "optimizer_type": "prodigy",
                 "optimizer_args": [
                     "decouple=True",
-                    "d_coef=1.1",
+                    "d_coef=0.9",
                     "weight_decay=0.01",
                     "use_bias_correction=True",
                     "safeguard_warmup=True"
